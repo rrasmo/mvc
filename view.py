@@ -1,15 +1,16 @@
 
 from cmd import Cmd
 
-class Cli(Cmd):
+class View(Cmd):
 
-    def __init__(self):
+    def __init__(self, controller):
         Cmd.__init__(self)
         self.prompt = '> '
+        self.controller = controller
 
     def do_foo(self, params):
-        print 'doing foo'
-        print params 
+        print 'foo in the view'
+        self.controller.foo(params)
 
     def help_foo(self):
         print 'foo is foo'

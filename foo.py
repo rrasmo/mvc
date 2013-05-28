@@ -1,11 +1,14 @@
 #!/usr/bin/python
 
-from cli import Cli
+from view import View
+from model import Model
+from controller import Controller
 
 if __name__ == '__main__':
 
-    #make a console
-    c = Cli()
-    c.cmdloop()
+    model = Model()
+    controller = Controller(model)
+    view = View(controller)
 
+    view.cmdloop()
 
