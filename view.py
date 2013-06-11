@@ -3,9 +3,11 @@ from cmd import Cmd
 
 class View(Cmd):
 
-    def __init__(self, controller):
+    def __init__(self):
         Cmd.__init__(self)
         self.prompt = '> '
+
+    def setController(self, controller):
         self.controller = controller
 
     def do_foo(self, params):

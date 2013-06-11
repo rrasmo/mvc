@@ -6,9 +6,12 @@ from controller import Controller
 
 if __name__ == '__main__':
 
+    view = View()
+    controller = Controller()
     model = Model()
-    controller = Controller(model)
-    view = View(controller)
+
+    view.setController(controller)
+    controller.setModel(model)
 
     view.cmdloop()
 

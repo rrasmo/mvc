@@ -1,7 +1,10 @@
 
 class Controller:
 
-    def __init__(self, model):
+    def __init__(self):
+        pass
+
+    def setModel(self, model):
         self.model = model
 
     def foo(self, params):
