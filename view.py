@@ -1,4 +1,3 @@
-
 from cmd import Cmd
 
 class View(Cmd):
