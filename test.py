@@ -27,6 +27,11 @@ class TestController(unittest.TestCase):
         self.controller.foo([])
         self.assertEqual(1, 1)
 
+    def test_state(self):
+        self.controller.set('arr')
+        val = self.controller.get()
+        self.assertEqual(val, 'arr')
+
 
 class TestModel(unittest.TestCase):
 

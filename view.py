@@ -23,3 +23,10 @@ class View(Cmd):
     def emptyline(self):
         pass
 
+    def do_get(self, params):
+        print self.controller.get()
+
+    def do_set(self, params):
+        if len(params) > 0:
+            self.controller.set(params[0])
+
